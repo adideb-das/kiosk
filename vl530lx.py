@@ -7,7 +7,6 @@ tof = adafruit_vl53l0x.VL53L0X(i2c)     # i2c address of lidar is  0x29
 
 while True:
     # Distance is in centimeters
-    dist_mm = tof.range
-    dist_cm = dist_mm/10
-    print(f"{dist_cm} cm")
+    dist = tof.range
+    print(f"{dist} mm")
     time.sleep(0.1)
